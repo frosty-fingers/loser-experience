@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { License } from '../license';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LicenseListComponent implements OnInit {
   pageTitle: string = 'Licenses';
-  licenses: any[] = [
+  licenses: License[] = [
     {
         "createdBy": "James Volis",
         "createdOnUtc": "2019-04-23T18:25:43.511Z",
@@ -52,7 +53,7 @@ export class LicenseListComponent implements OnInit {
         "productReleaseVersion": "8.1.0"
     }
   ];
-  
+
   constructor() {}
 
   ngOnInit() {

@@ -1,0 +1,16 @@
+[
+    {
+        "createdBy": "James Volis",
+        "createdOnUtc": "2019-04-23T18:25:43.511Z",
+        "customerCode": "JVOL",
+        "expiresAfterDays": 365,
+        "expiresOnUtc": "2020-04-23T18:25:43.511Z"
+        "id": 1,
+        "licenseeName": "J.P.Volis"
+        "licenseeOrganisation": "Jamesocentric",
+        "licenseIdentifier": "54321",
+        "productCode": "12345",
+        "productName": "James's app",
+        "productReleaseVersion": "8.1.0"
+    }
+]

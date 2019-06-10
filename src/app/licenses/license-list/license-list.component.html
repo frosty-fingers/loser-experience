@@ -1,14 +1,16 @@
 <h1>{{ pageTitle }}</h1>
-<table class="table table-striped" *ngIf='licenses && licenses.length'>
+<table class="table table-striped" *ngIf='licenses && licenses.length' sortable-table >
   <thead>
-    <th>Created by</th>
-    <th>Creation date</th>
-    <th>Customer code</th>
-    <th>Expiry date</th>
-    <th>Expires in</th>
-    <th>Customer</th>
-    <th>Product</th>
-    <th>Product version</th>
+    <tr>
+      <th sortable-column="createdBy">Created by</th>
+      <th sortable-column="createdOnUtc">Creation date</th>
+      <th sortable-column="customerCode">Customer code</th>
+      <th sortable-column="expiresOnUtc">Expiry date</th>
+      <th sortable-column="expiresAfterDays">Expires in</th>
+      <th sortable-column="licenseeName">Customer</th>
+      <th sortable-column="productName">Product</th>
+      <th sortable-column="productReleaseVersion">Product version</th>
+    </tr>
   </thead>
   <tbody>
     <tr *ngFor='let license of licenses'>

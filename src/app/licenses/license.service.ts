@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap, } from 'rxjs/operators';
+import { License } from './license';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class LicenseService {
 
   constructor(private http: HttpClient) {}
 
-  getLicenses(): Observable<any[]>{
+  getLicenses(): Observable<License[]>{
     return this.http.get<any[]>(this.licenseUrl).pipe(
       tap(data => console.log('All: ' + JSON.stringify(data))),
       catchError(this.handleError)

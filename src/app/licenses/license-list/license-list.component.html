@@ -1,5 +1,5 @@
 <h1>{{ pageTitle }}</h1>
-<table *ngIf='licenses && licenses.length'>
+<table class="table table-striped" *ngIf='licenses && licenses.length'>
   <thead>
     <th>Created by</th>
     <th>Creation date</th>
@@ -13,11 +13,11 @@
   <tbody>
     <tr *ngFor='let license of licenses'>
       <td>{{license.createdBy}}</td>
-      <td>{{license.createdOnUtc}}</td>
+      <td>{{license.createdOnUtc | date: 'short': '+600'}}</td>
       <td>{{license.customerCode}}</td>
-      <td>{{license.expiresOnUtc}}</td>
-      <td>{{license.expiresAfterDays}}</td>
-      <td>{{license.name}}</td>
+      <td>{{license.expiresOnUtc | date: 'short': '+600' }}</td>
+      <td>{{license.expiresAfterDays + ' days'}}</td>
+      <td>{{license.licenseeName}}</td>
       <td>{{license.productName}}</td>
       <td>{{license.productReleaseVersion}}</td>
     </tr>

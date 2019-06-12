@@ -8,7 +8,7 @@ import { License } from './license';
   providedIn: 'root'
 })
 export class LicenseService {
-  private licenseUrl = 'api/licenses/license.json';
+  private licenseUrl = 'http://localhost:50266/api/licenses/list';
 
   constructor(private http: HttpClient) {}
 
